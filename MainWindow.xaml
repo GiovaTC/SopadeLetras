@@ -1,0 +1,22 @@
+﻿<Window x:Class="WordSearchGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sopa de Letras" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Cuadrícula para la sopa de letras -->
+        <UniformGrid x:Name="WordGrid" Rows="10" Columns="10" Grid.Column="0" Margin="10">
+            <!-- Las letras serán generadas dinámicamente en el código detrás -->
+        </UniformGrid>
+
+        <!-- Lista de palabras a encontrar -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Palabras a encontrar:" FontWeight="Bold" Margin="0,0,0,10" />
+            <ListBox x:Name="WordsList" />
+        </StackPanel>
+    </Grid>
+</Window>
